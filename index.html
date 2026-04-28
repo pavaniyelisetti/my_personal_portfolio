@@ -3,107 +3,86 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pavani Yelisetti | Data Scientist</title>
+<title>Pavani Yelisetti | Portfolio</title>
 
 <style>
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #0f172a, #020617);
-  color: #e2e8f0;
-}
-
-/* NAVBAR */
-nav {
-  position: sticky;
-  top: 0;
-  background: rgba(15,23,42,0.8);
-  backdrop-filter: blur(10px);
-  display: flex;
-  justify-content: center;
-  padding: 10px;
-  z-index: 1000;
-}
-
-nav a {
-  color: #cbd5f5;
-  margin: 0 12px;
-  text-decoration: none;
-  font-size: 0.9rem;
-}
-
-nav a:hover {
-  color: #38bdf8;
+  background: linear-gradient(135deg, #ffffff, #f3f4f6);
+  color: #222;
 }
 
 /* HERO */
 .hero {
-  text-align: center;
-  padding: 80px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 10%;
+  background: linear-gradient(to bottom, #ffffff 50%, #e9b86c 50%);
 }
 
-.hero h1 {
+.hero-text h1 {
   font-size: 2.5rem;
-  background: linear-gradient(90deg, #38bdf8, #6366f1);
-  -webkit-background-clip: text;
-  color: transparent;
 }
 
-.hero p {
-  color: #94a3b8;
+.hero-text p {
+  font-size: 1.2rem;
+  color: #555;
 }
 
-/* CONTAINER */
+/* HEXAGON */
+.hex {
+  width: 250px;
+  height: 250px;
+  background: #e9b86c;
+  clip-path: polygon(25% 6.7%,75% 6.7%,100% 50%,75% 93.3%,25% 93.3%,0% 50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hex img {
+  width: 90%;
+  height: 90%;
+  object-fit: cover;
+  clip-path: inherit;
+}
+
+/* SECTIONS */
 .container {
-  max-width: 1100px;
-  margin: auto;
-  padding: 20px;
+  padding: 40px 10%;
 }
 
-/* GLASS CARD */
-.card {
-  background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(12px);
-  border-radius: 12px;
-  padding: 20px;
-  margin-bottom: 20px;
-  border: 1px solid rgba(255,255,255,0.08);
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  border-color: #38bdf8;
-}
-
-/* HEADINGS */
 h2 {
-  border-left: 4px solid #38bdf8;
+  border-left: 5px solid #e9b86c;
   padding-left: 10px;
-  margin-bottom: 15px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  margin: 15px 0;
+  border-radius: 8px;
+  box-shadow: 0 5px 12px rgba(0,0,0,0.05);
 }
 
 /* SKILLS */
 .skills span {
   display: inline-block;
-  margin: 5px;
+  background: #ffe4b5;
   padding: 6px 10px;
+  margin: 5px;
   border-radius: 6px;
-  background: #1e293b;
   font-size: 0.8rem;
 }
 
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 20px;
-  color: #64748b;
-}
-
 /* MOBILE */
-@media(max-width: 600px) {
-  .hero h1 {
-    font-size: 1.7rem;
+@media(max-width: 768px){
+  .hero {
+    flex-direction: column;
+    text-align: center;
   }
 }
 </style>
@@ -111,51 +90,62 @@ footer {
 
 <body>
 
-<nav>
-<a href="#summary">Summary</a>
-<a href="#skills">Skills</a>
-<a href="#experience">Experience</a>
-<a href="#projects">Projects</a>
-<a href="#education">Education</a>
-<a href="#certifications">Certifications</a>
-</nav>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-text">
+    <h1>I am Pavani Yelisetti</h1>
+    <p>Data Scientist | Energy Analytics & Data Engineering</p>
+    <p>Charlotte, NC • 704-965-7144 • pyeliset@charlotte.edu</p>
+  </div>
 
-<div class="hero">
-<h1>Pavani Yelisetti</h1>
-<p>Data Scientist | Energy Analytics & Data Engineering</p>
-<p>Charlotte, NC • 704-965-7144 • pyeliset@charlotte.edu</p>
-</div>
+  <div class="hex">
+    <img src="https://via.placeholder.com/300">
+  </div>
+</section>
 
 <div class="container">
 
-<section id="summary">
+<!-- SUMMARY -->
 <h2>Profile Summary</h2>
 <div class="card">
 Data Scientist with hands-on experience in large-scale data analysis, pipeline engineering, and customer analytics in the energy sector. Skilled in PostgreSQL, Python, PySpark, and AWS with a track record of resolving complex data quality issues affecting millions of customers. Experienced in cross-functional collaboration, end-to-end code ownership, and translating technical findings into business impact.
 </div>
-</section>
 
-<section id="skills">
+<!-- SKILLS -->
 <h2>Technical Skills</h2>
 <div class="card skills">
+
 <b>Languages & Visualization:</b><br>
-<span>Python</span><span>R</span><span>SAS</span><span>SQL</span><span>VBA</span><span>Power BI</span><span>Tableau</span><span>Excel</span><br><br>
+<span>Python</span><span>R</span><span>SAS</span><span>SQL</span><span>VBA</span>
+<span>Power BI</span><span>Tableau</span>
+<span>Excel (Solver, Power Query, Pivot Tables)</span><br><br>
 
 <b>Libraries:</b><br>
-<span>pandas</span><span>NumPy</span><span>scikit-learn</span><span>Matplotlib</span><span>TensorFlow</span><span>patsy</span><span>seaborn</span><span>SciPy</span><span>PyTorch</span><span>PySpark</span><br><br>
+<span>pandas</span><span>NumPy</span><span>scikit-learn</span><span>Matplotlib</span>
+<span>TensorFlow</span><span>patsy</span><span>seaborn</span><span>SciPy</span>
+<span>PyTorch</span><span>PySpark</span><br><br>
 
 <b>Techniques:</b><br>
-<span>Time Series Forecasting</span><span>Machine Learning (Supervised & Unsupervised)</span><span>Optimization</span><span>Statistical Analysis</span><br><br>
+<span>Time Series Forecasting</span>
+<span>Machine Learning (Supervised & Unsupervised)</span>
+<span>Optimization</span>
+<span>Statistical Analysis</span><br><br>
 
 <b>Cloud & Platforms:</b><br>
-<span>AWS (S3, Lambda, Step Functions, EMR)</span><span>Snowflake</span><span>PostgreSQL</span><span>Databricks</span><span>Git</span><span>GitHub</span><span>VS Code</span><span>Jupyter Notebook</span><span>SAS Studio</span><span>R Studio</span><span>Microsoft Office</span><br><br>
+<span>AWS (S3, Lambda, Step Functions, EMR)</span>
+<span>Snowflake</span><span>PostgreSQL</span><span>Databricks</span>
+<span>Git</span><span>GitHub</span><span>VS Code</span>
+<span>Jupyter Notebook</span><span>SAS Studio</span><span>R Studio</span>
+<span>Microsoft Office Suite</span><br><br>
 
 <b>Soft Skills:</b><br>
-<span>Communication</span><span>Collaboration</span><span>Analytical Thinking</span><span>Problem Solving</span><span>Adaptability</span><span>Attention to Detail</span>
-</div>
-</section>
+<span>Communication</span><span>Collaboration</span>
+<span>Analytical Thinking</span><span>Problem Solving</span>
+<span>Adaptability</span><span>Attention to Detail</span>
 
-<section id="experience">
+</div>
+
+<!-- EXPERIENCE -->
 <h2>Work Experience</h2>
 
 <div class="card">
@@ -163,20 +153,20 @@ Data Scientist with hands-on experience in large-scale data analysis, pipeline e
 <em>Feb 2026 – Present | Charlotte, NC</em>
 <ul>
 <li>Resolved data discrepancies across 1M+ of 7M customer accounts on the HERO platform via root cause analysis in PostgreSQL & Python</li>
-<li>Re-engineered stored procedures ensuring accurate cohort assignments</li>
-<li>Ran PySpark jobs on AWS EMR using Lambda & S3 for scalable remediation</li>
-<li>Managed end-to-end code lifecycle via VS Code and GitHub PR workflows</li>
+<li>Re-engineered stored procedures to ensure accurate cohort assignments</li>
+<li>Ran PySpark jobs on AWS EMR using Lambda & S3 for scalable data remediation</li>
+<li>Managed end-to-end code lifecycle via VS Code and GitHub PR workflows, coordinating cross-functional review, testing, and deployment</li>
 </ul>
 </div>
 
 <div class="card">
 <b>UNC Charlotte (BigDEAL Lab) — Research Assistant</b><br>
-<em>May 2025 – Present</em>
+<em>May 2025 – Present | Charlotte, NC</em>
 <ul>
-<li>Analyzed 700M+ smart-meter records to classify heating technologies</li>
-<li>Built end-to-end pipeline including cleansing, anomaly detection, feature engineering (495 variables)</li>
-<li>Developed probabilistic forecasting across 30 scenarios</li>
-<li>Identified ~0.1 kWh/°F savings (~25% annual reduction)</li>
+<li>Analyzed 700M+ smart-meter records from Brunswick EMC to classify heating technologies using piecewise linear regression</li>
+<li>Built end-to-end data pipeline with cleansing, anomaly detection, and feature engineering (495 variables)</li>
+<li>Enabled probabilistic forecasting with 30 scenarios modeling temperature-load relationships</li>
+<li>Identified ~0.1 kWh/°F heating savings translating to ~25% annual energy cost reduction</li>
 </ul>
 </div>
 
@@ -184,7 +174,7 @@ Data Scientist with hands-on experience in large-scale data analysis, pipeline e
 <b>UNC Charlotte — Graduate Teaching Assistant</b><br>
 <em>Aug 2024 – Dec 2025</em>
 <ul>
-<li>Guided 40+ students in R-based analytics, system design, and deployment</li>
+<li>Guided 40+ students in R-based data analysis, system design, and deployment emphasizing optimization and scheduling</li>
 </ul>
 </div>
 
@@ -193,21 +183,21 @@ Data Scientist with hands-on experience in large-scale data analysis, pipeline e
 <em>Nov 2024 – Mar 2025</em>
 <ul>
 <li>Built Python–SAS demand forecasting models improving accuracy by 15–20%</li>
-<li>Translated analytical insights into business decisions</li>
+<li>Optimized production and logistics planning</li>
+<li>Presented technical insights to non-technical stakeholders</li>
 </ul>
 </div>
 
-</section>
-
-<section id="projects">
+<!-- PROJECTS -->
 <h2>Projects</h2>
 
 <div class="card">
 <b>Production Planning Optimization</b><br>
 <em>Jan 2025 – May 2025</em>
 <ul>
-<li>Built Python–Gurobi MILP model minimizing changeover costs</li>
-<li>Reduced setup time by 48% and recovered 40–60% of lost work hours</li>
+<li>Built Python–Gurobi MILP optimization model for production scheduling</li>
+<li>Minimized color changeover costs and reduced setup time by 48%</li>
+<li>Recovered 40–60% of lost daily work hours</li>
 </ul>
 </div>
 
@@ -215,33 +205,31 @@ Data Scientist with hands-on experience in large-scale data analysis, pipeline e
 <b>Electric Price Forecasting – ERCOT</b><br>
 <em>Jan 2025 – May 2025</em>
 <ul>
-<li>Developed ARX, NARX, Holt-Winters models</li>
-<li>Reduced RMSE by 8–25% via ensemble modeling</li>
+<li>Developed ARX, NARX, and Holt-Winters forecasting models</li>
+<li>Applied ensemble averaging to reduce RMSE by 8–25%</li>
+<li>Outperformed naïve forecasting benchmarks</li>
 </ul>
 </div>
 
-</section>
-
-<section id="education">
+<!-- EDUCATION -->
 <h2>Education</h2>
 
 <div class="card">
 <b>University of North Carolina at Charlotte</b><br>
-M.S. Engineering Management<br>
-Energy Analytics & Supply Chain<br>
+M.S. Engineering/Industrial Management<br>
+Concentrations: Energy Analytics | Logistics & Supply Chain<br>
 CGPA: 3.52/4.0
 </div>
 
 <div class="card">
-<b>JNTU-GV, India</b><br>
+<b>Jawaharlal Nehru Technological University – Gurajada (JNTUGV)</b><br>
 B.Tech Electronics and Communication Engineering<br>
 CGPA: 8.27/10
 </div>
 
-</section>
-
-<section id="certifications">
+<!-- CERTIFICATIONS -->
 <h2>Certifications</h2>
+
 <div class="card">
 <ul>
 <li>SAS Base & Advanced – SAS Institute</li>
@@ -249,13 +237,8 @@ CGPA: 8.27/10
 <li>The Analytics Edge – MIT OpenCourseWare</li>
 </ul>
 </div>
-</section>
 
 </div>
-
-<footer>
-© 2026 Pavani Yelisetti
-</footer>
 
 </body>
 </html>
