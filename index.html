@@ -13,7 +13,6 @@ body {
   color: #222;
 }
 
-/* HERO */
 .hero {
   display: flex;
   flex-wrap: wrap;
@@ -28,11 +27,29 @@ body {
 }
 
 .hero-text p {
-  font-size: 1.2rem;
+  font-size: 1.05rem;
   color: #555;
 }
 
-/* HEXAGON */
+.social-buttons {
+  margin-top: 15px;
+}
+
+.social-buttons a {
+  text-decoration: none;
+  padding: 8px 16px;
+  margin-right: 10px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  background: #e9b86c;
+  color: #222;
+  font-weight: 500;
+}
+
+.social-buttons a:hover {
+  background: #d99c3a;
+}
+
 .hex {
   width: 250px;
   height: 250px;
@@ -50,7 +67,6 @@ body {
   clip-path: inherit;
 }
 
-/* SECTIONS */
 .container {
   padding: 40px 10%;
 }
@@ -68,7 +84,6 @@ h2 {
   box-shadow: 0 5px 12px rgba(0,0,0,0.05);
 }
 
-/* SKILLS */
 .skills span {
   display: inline-block;
   background: #ffe4b5;
@@ -78,7 +93,6 @@ h2 {
   font-size: 0.8rem;
 }
 
-/* MOBILE */
 @media(max-width: 768px){
   .hero {
     flex-direction: column;
@@ -90,31 +104,34 @@ h2 {
 
 <body>
 
-<!-- HERO -->
 <section class="hero">
   <div class="hero-text">
-    <h1>I am Pavani Yelisetti</h1>
-    <p>Data Scientist | Energy Analytics & Data Engineering</p>
-    <p>Charlotte, NC • 704-965-7144 • pyeliset@charlotte.edu</p>
+    <h1>Pavani Yelisetti</h1>
+    <p>Data Scientist  |  Energy Analytics & Data Engineering</p>
+    <p>Charlotte, NC  •  704-965-7144  •  pyeliset@charlotte.edu</p>
+
+    <div class="social-buttons">
+      <a href="https://github.com/pavaniyelisetti" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/pavani-yelisetti-363424257/" target="_blank">LinkedIn</a>
+    </div>
   </div>
 
   <div class="hex">
-<img src="https://raw.githubusercontent.com/pavaniyelisetti/my_personal_portfolio/main/professional_pic_mirror.png" alt="Pavani Yelisetti">  </div>
+    <img src="https://raw.githubusercontent.com/pavaniyelisetti/my_personal_portfolio/main/professional_pic_mirror.png" alt="Pavani Yelisetti">
+  </div>
 </section>
 
 <div class="container">
 
-<!-- SUMMARY -->
-<h2>Profile Summary</h2>
+<h2>PROFILE SUMMARY</h2>
 <div class="card">
 Data Scientist with hands-on experience in large-scale data analysis, pipeline engineering, and customer analytics in the energy sector. Skilled in PostgreSQL, Python, PySpark, and AWS with a track record of resolving complex data quality issues affecting millions of customers. Experienced in cross-functional collaboration, end-to-end code ownership, and translating technical findings into business impact.
 </div>
 
-<!-- SKILLS -->
-<h2>Technical Skills</h2>
+<h2>TECHNICAL SKILLS</h2>
 <div class="card skills">
 
-<b>Languages & Visualization:</b><br>
+<b>Languages & Data visualization:</b><br>
 <span>Python</span><span>R</span><span>SAS</span><span>SQL</span><span>VBA</span>
 <span>Power BI</span><span>Tableau</span>
 <span>Excel (Solver, Power Query, Pivot Tables)</span><br><br>
@@ -131,7 +148,7 @@ Data Scientist with hands-on experience in large-scale data analysis, pipeline e
 <span>Statistical Analysis</span><br><br>
 
 <b>Cloud & Platforms:</b><br>
-<span>AWS (S3, Lambda, Step Functions, EMR)</span>
+<span>AWS (S3, Lambda, Step Functions, EC2)</span>
 <span>Snowflake</span><span>PostgreSQL</span><span>Databricks</span>
 <span>Git</span><span>GitHub</span><span>VS Code</span>
 <span>Jupyter Notebook</span><span>SAS Studio</span><span>R Studio</span>
@@ -144,59 +161,57 @@ Data Scientist with hands-on experience in large-scale data analysis, pipeline e
 
 </div>
 
-<!-- EXPERIENCE -->
-<h2>Work Experience</h2>
+<h2>WORK EXPERIENCE</h2>
 
 <div class="card">
-<b>Duke Energy Corporation — Data Scientist (Contractor)</b><br>
-<em>Feb 2026 – Present | Charlotte, NC</em>
+<b>Data Scientist – Contractor</b><br>
+Duke Energy Corporation  |  Charlotte, NC<br>
+<em>Feb 2026 – Present</em>
 <ul>
-<li>Resolved data discrepancies across 1M+ of 7M customer accounts on the HERO platform via root cause analysis in PostgreSQL & Python</li>
-<li>Re-engineered stored procedures to ensure accurate cohort assignments</li>
-<li>Ran PySpark jobs on AWS EMR using Lambda & S3 for scalable data remediation</li>
-<li>Managed end-to-end code lifecycle via VS Code and GitHub PR workflows, coordinating cross-functional review, testing, and deployment</li>
+<li>Resolved data discrepancies across 1M+ of 7M customer accounts on the HERO (Home Energy Report Operations) platform via root cause analysis in PostgreSQL & Python, re-engineering stored procedures to ensure accurate cohort assignments</li>
+<li>Ran PySpark jobs on AWS EMR using Lambda & S3 for scalable data remediation across dev and staging environments</li>
+<li>Managed end-to-end code lifecycle via VS Code and GitHub PRs, coordinating cross-functional review, testing, and deployment</li>
 </ul>
 </div>
 
 <div class="card">
-<b>UNC Charlotte (BigDEAL Lab) — Research Assistant</b><br>
-<em>May 2025 – Present | Charlotte, NC</em>
+<b>Research Assistant – Big Data Energy Analytics Lab (BigDEAL)</b><br>
+UNC Charlotte (EPIC)  |  Charlotte, NC<br>
+<em>May 2025 – Present</em>
 <ul>
-<li>Analyzed 700M+ smart-meter records from Brunswick EMC to classify heating technologies using piecewise linear regression</li>
-<li>Built end-to-end data pipeline with cleansing, anomaly detection, and feature engineering (495 variables)</li>
-<li>Enabled probabilistic forecasting with 30 scenarios modeling temperature-load relationships</li>
-<li>Identified ~0.1 kWh/°F heating savings translating to ~25% annual energy cost reduction</li>
+<li>Analyzed 700M+ smart-meter records from Brunswick EMC to classify heating technologies (heat pump, electric, gas) using piecewise linear regression under customer segmentation</li>
+<li>Built end-to-end data pipeline with data cleansing, anomaly detection, and feature engineering (495 variables), enabling probabilistic forecasting with 30 scenarios to model temperature-load relationships</li>
+<li>Identified ~0.1 kWh/°F heating savings from heat pump adoption, translating to ~25% reduction in annual energy costs</li>
 </ul>
 </div>
 
 <div class="card">
-<b>UNC Charlotte — Graduate Teaching Assistant</b><br>
+<b>Graduate Teaching Assistant</b><br>
+UNC Charlotte  |  Charlotte, NC<br>
 <em>Aug 2024 – Dec 2025</em>
 <ul>
-<li>Guided 40+ students in R-based data analysis, system design, and deployment emphasizing optimization and scheduling</li>
+<li>Guided 40+ students in R-based data analysis, system design, and deployment courses emphasizing optimization, process design, and project scheduling</li>
 </ul>
 </div>
 
 <div class="card">
-<b>UNC Charlotte / CONMET — Graduate Research Assistant</b><br>
+<b>Graduate Research Assistant</b><br>
+UNC Charlotte / CONMET  |  Charlotte, NC<br>
 <em>Nov 2024 – Mar 2025</em>
 <ul>
-<li>Built Python–SAS demand forecasting models improving accuracy by 15–20%</li>
-<li>Optimized production and logistics planning</li>
-<li>Presented technical insights to non-technical stakeholders</li>
+<li>Built Python–SAS demand forecasting models for CONMET (manufacturing partner), improving forecast accuracy by 15–20% and optimizing production and logistics planning</li>
+<li>Presented technical insights to non-technical stakeholders, translating analytical results into actionable business recommendations</li>
 </ul>
 </div>
 
-<!-- PROJECTS -->
-<h2>Projects</h2>
+<h2>PROJECTS</h2>
 
 <div class="card">
 <b>Production Planning Optimization</b><br>
 <em>Jan 2025 – May 2025</em>
 <ul>
-<li>Built Python–Gurobi MILP optimization model for production scheduling</li>
-<li>Minimized color changeover costs and reduced setup time by 48%</li>
-<li>Recovered 40–60% of lost daily work hours</li>
+<li>Built a Python–Gurobi MILP optimization model for production scheduling, minimizing color changeover costs and reducing setup time by 48%, recovering 40–60% of lost daily work hours</li>
+<li>Tools: Python, Gurobi, MILP Optimization</li>
 </ul>
 </div>
 
@@ -204,30 +219,29 @@ Data Scientist with hands-on experience in large-scale data analysis, pipeline e
 <b>Electric Price Forecasting – ERCOT</b><br>
 <em>Jan 2025 – May 2025</em>
 <ul>
-<li>Developed ARX, NARX, and Holt-Winters forecasting models</li>
-<li>Applied ensemble averaging to reduce RMSE by 8–25%</li>
-<li>Outperformed naïve forecasting benchmarks</li>
+<li>Developed ARX/NARX/Holt-Winters models for ERCOT price forecasting; applied ensemble averaging to cut RMSE by 8–25% and outperform naïve forecasts</li>
+<li>Tools: Python, R, Time Series Forecasting, Ensemble Methods</li>
 </ul>
 </div>
 
-<!-- EDUCATION -->
-<h2>Education</h2>
+<h2>EDUCATION</h2>
 
 <div class="card">
-<b>University of North Carolina at Charlotte</b><br>
-M.S. Engineering/Industrial Management<br>
-Concentrations: Energy Analytics | Logistics & Supply Chain<br>
-CGPA: 3.52/4.0
+M.S. in Engineering/Industrial Management<br>
+University of North Carolina at Charlotte (UNCC)  |  Charlotte, NC<br>
+Jan 2024 – Jan 2026<br>
+CGPA: 3.52/4.0<br>
+Concentrations: Energy Analytics  |  Logistics & Supply Chain
 </div>
 
 <div class="card">
-<b>Jawaharlal Nehru Technological University – Gurajada (JNTUGV)</b><br>
-B.Tech Electronics and Communication Engineering<br>
+B.Tech in Electronics and Communication Engineering (ECE)<br>
+Jawaharlal Nehru Technological University – Gurajada (JNTUGV)  |  Vizianagaram, India<br>
+Aug 2020 – Apr 2023<br>
 CGPA: 8.27/10
 </div>
 
-<!-- CERTIFICATIONS -->
-<h2>Certifications</h2>
+<h2>CERTIFICATIONS</h2>
 
 <div class="card">
 <ul>
