@@ -9,89 +9,63 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #ffffff, #f3f4f6);
+  background: #f3f4f6;
   color: #222;
 }
 
 /* HERO */
-.hero {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  padding: 60px 10%;
-  background: linear-gradient(to bottom, #ffffff 50%, #e9b86c 50%);
+.hero-top {
+  background: #f3f4f6;
+  padding: 60px 10% 20px;
 }
 
-.hero-text h1 {
-  font-size: 2.5rem;
+.hero-top h1 {
+  font-size: 3rem;
+  margin: 0;
 }
 
-.hero-text p {
+/* YELLOW BAND */
+.hero-bottom {
+  background: #d6b273;
+  padding: 30px 10% 60px;
+}
+
+.role {
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.hero-bottom p {
+  color: #333;
   font-size: 1.05rem;
-  color: #555;
 }
 
-/* SOCIAL BUTTONS */
+/* LINKS */
 .social-buttons {
   margin-top: 15px;
 }
 
 .social-buttons a {
   text-decoration: none;
-  padding: 8px 16px;
-  margin-right: 10px;
-  border-radius: 6px;
-  font-size: 0.9rem;
-  background: #e9b86c;
+  margin-right: 20px;
   color: #222;
   font-weight: 500;
-  transition: 0.3s;
 }
 
-.social-buttons a:hover {
-  background: #d99c3a;
-  transform: translateY(-2px);
-}
-
-/* RESUME BUTTON */
+/* BUTTON */
 .resume-button {
-  margin-top: 15px;
+  margin-top: 20px;
 }
 
 .resume-button a {
-  text-decoration: none;
-  padding: 10px 18px;
-  border-radius: 6px;
   background: #222;
-  color: #fff;
-  font-size: 0.9rem;
+  color: white;
+  padding: 12px 22px;
+  border-radius: 10px;
+  text-decoration: none;
   font-weight: 500;
-  display: inline-block;
-  transition: 0.3s;
-}
-
-.resume-button a:hover {
-  background: #000;
-  transform: translateY(-2px);
-}
-
-/* HEXAGON */
-.hex {
-  width: 250px;
-  height: 250px;
-  background: #e9b86c;
-  clip-path: polygon(25% 6.7%,75% 6.7%,100% 50%,75% 93.3%,25% 93.3%,0% 50%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hex img {
-  width: 90%;
-  height: 90%;
-  object-fit: cover;
-  clip-path: inherit;
 }
 
 /* CONTENT */
@@ -100,7 +74,7 @@ body {
 }
 
 h2 {
-  border-left: 5px solid #e9b86c;
+  border-left: 5px solid #d6b273;
   padding-left: 10px;
 }
 
@@ -123,8 +97,7 @@ h2 {
 
 /* MOBILE */
 @media(max-width: 768px){
-  .hero {
-    flex-direction: column;
+  .hero-top, .hero-bottom {
     text-align: center;
   }
 }
@@ -133,26 +106,24 @@ h2 {
 
 <body>
 
-<section class="hero">
-  <div class="hero-text">
-    <h1>Pavani Yelisetti</h1>
-    <p>Data Scientist  |  Energy Analytics & Data Engineering</p>
-    <p>Charlotte, NC  •  704-965-7144  •  pyeliset@charlotte.edu</p>
+<!-- HERO -->
+<section class="hero-top">
+  <h1>Pavani Yelisetti</h1>
+</section>
 
-    <div class="social-buttons">
-      <a href="https://github.com/pavaniyelisetti" target="_blank">GitHub</a>
-      <a href="https://www.linkedin.com/in/pavani-yelisetti-363424257/" target="_blank">LinkedIn</a>
-    </div>
+<section class="hero-bottom">
+  <p class="role">Data Scientist | Energy Analytics & Data Engineering</p>
+  <p>Charlotte, NC • 704-965-7144 • pyeliset@charlotte.edu</p>
 
-    <div class="resume-button">
-      <a href="https://docs.google.com/document/d/1mmJZWMNdli6FyeODuO3v84pSbRw2izpS/export?format=pdf" target="_blank">
-        Download Resume
-      </a>
-    </div>
+  <div class="social-buttons">
+    <a href="https://github.com/pavaniyelisetti" target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/in/pavani-yelisetti-363424257/" target="_blank">LinkedIn</a>
   </div>
 
-  <div class="hex">
-    <img src="https://raw.githubusercontent.com/pavaniyelisetti/my_personal_portfolio/main/professional_pic_mirror.png" alt="Pavani Yelisetti">
+  <div class="resume-button">
+    <a href="https://docs.google.com/document/d/1mmJZWMNdli6FyeODuO3v84pSbRw2izpS/export?format=pdf" target="_blank">
+      Download Resume
+    </a>
   </div>
 </section>
 
@@ -166,7 +137,7 @@ Data Scientist with hands-on experience in large-scale data analysis, pipeline e
 <h2>TECHNICAL SKILLS</h2>
 <div class="card skills">
 
-<b>Languages & Data visualization:</b><br>
+<b>Languages & Visualization:</b><br>
 <span>Python</span><span>R</span><span>SAS</span><span>SQL</span><span>VBA</span>
 <span>Power BI</span><span>Tableau</span>
 <span>Excel (Solver, Power Query, Pivot Tables)</span><br><br>
@@ -183,7 +154,7 @@ Data Scientist with hands-on experience in large-scale data analysis, pipeline e
 <span>Statistical Analysis</span><br><br>
 
 <b>Cloud & Platforms:</b><br>
-<span>AWS (S3, Lambda, Step Functions, EC2)</span>
+<span>AWS (S3, Lambda, Step Functions, EMR)</span>
 <span>Snowflake</span><span>PostgreSQL</span><span>Databricks</span>
 <span>Git</span><span>GitHub</span><span>VS Code</span>
 <span>Jupyter Notebook</span><span>SAS Studio</span><span>R Studio</span>
@@ -200,7 +171,7 @@ Data Scientist with hands-on experience in large-scale data analysis, pipeline e
 
 <div class="card">
 <b>Data Scientist – Contractor</b><br>
-Duke Energy Corporation  |  Charlotte, NC<br>
+Duke Energy Corporation | Charlotte, NC<br>
 <em>Feb 2026 – Present</em>
 <ul>
 <li>Resolved data discrepancies across 1M+ of 7M customer accounts on the HERO (Home Energy Report Operations) platform via root cause analysis in PostgreSQL & Python, re-engineering stored procedures to ensure accurate cohort assignments</li>
@@ -211,7 +182,7 @@ Duke Energy Corporation  |  Charlotte, NC<br>
 
 <div class="card">
 <b>Research Assistant – Big Data Energy Analytics Lab (BigDEAL)</b><br>
-UNC Charlotte (EPIC)  |  Charlotte, NC<br>
+UNC Charlotte (EPIC) | Charlotte, NC<br>
 <em>May 2025 – Present</em>
 <ul>
 <li>Analyzed 700M+ smart-meter records from Brunswick EMC to classify heating technologies (heat pump, electric, gas) using piecewise linear regression under customer segmentation</li>
@@ -222,7 +193,7 @@ UNC Charlotte (EPIC)  |  Charlotte, NC<br>
 
 <div class="card">
 <b>Graduate Teaching Assistant</b><br>
-UNC Charlotte  |  Charlotte, NC<br>
+UNC Charlotte | Charlotte, NC<br>
 <em>Aug 2024 – Dec 2025</em>
 <ul>
 <li>Guided 40+ students in R-based data analysis, system design, and deployment courses emphasizing optimization, process design, and project scheduling</li>
@@ -231,7 +202,7 @@ UNC Charlotte  |  Charlotte, NC<br>
 
 <div class="card">
 <b>Graduate Research Assistant</b><br>
-UNC Charlotte / CONMET  |  Charlotte, NC<br>
+UNC Charlotte / CONMET | Charlotte, NC<br>
 <em>Nov 2024 – Mar 2025</em>
 <ul>
 <li>Built Python–SAS demand forecasting models for CONMET (manufacturing partner), improving forecast accuracy by 15–20% and optimizing production and logistics planning</li>
@@ -263,17 +234,15 @@ UNC Charlotte / CONMET  |  Charlotte, NC<br>
 
 <div class="card">
 M.S. in Engineering/Industrial Management<br>
-University of North Carolina at Charlotte (UNCC)  |  Charlotte, NC<br>
-Jan 2024 – Jan 2026<br>
-CGPA: 3.52/4.0<br>
-Concentrations: Energy Analytics  |  Logistics & Supply Chain
+University of North Carolina at Charlotte (UNCC) | Charlotte, NC | CGPA: 3.52/4.0<br>
+Concentrations: Energy Analytics | Logistics & Supply Chain<br>
+Jan 2024 – Jan 2026
 </div>
 
 <div class="card">
 B.Tech in Electronics and Communication Engineering (ECE)<br>
-Jawaharlal Nehru Technological University – Gurajada (JNTUGV)  |  Vizianagaram, India<br>
-Aug 2020 – Apr 2023<br>
-CGPA: 8.27/10
+Jawaharlal Nehru Technological University – Gurajada (JNTUGV) | Vizianagaram, India | CGPA: 8.27/10<br>
+Aug 2020 – Apr 2023
 </div>
 
 <h2>CERTIFICATIONS</h2>
