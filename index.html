@@ -13,7 +13,7 @@ body {
   color: #222;
 }
 
-/* HERO */
+/* HERO TOP */
 .hero-top {
   background: #f3f4f6;
   padding: 60px 10% 20px;
@@ -24,12 +24,25 @@ body {
   margin: 0;
 }
 
-/* YELLOW BAND */
+/* HERO BOTTOM */
 .hero-bottom {
   background: #d6b273;
-  padding: 30px 10% 60px;
+  padding: 40px 10%;
 }
 
+/* FLEX LAYOUT */
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.hero-left {
+  flex: 1;
+}
+
+/* ROLE TEXT */
 .role {
   color: white;
   font-size: 1.4rem;
@@ -37,9 +50,9 @@ body {
   margin-bottom: 10px;
 }
 
+/* CONTACT */
 .hero-bottom p {
   color: #333;
-  font-size: 1.05rem;
 }
 
 /* LINKS */
@@ -48,8 +61,8 @@ body {
 }
 
 .social-buttons a {
-  text-decoration: none;
   margin-right: 20px;
+  text-decoration: none;
   color: #222;
   font-weight: 500;
 }
@@ -65,7 +78,16 @@ body {
   padding: 12px 22px;
   border-radius: 10px;
   text-decoration: none;
-  font-weight: 500;
+}
+
+/* IMAGE */
+.hero-right img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 6px solid white;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
 /* CONTENT */
@@ -97,7 +119,8 @@ h2 {
 
 /* MOBILE */
 @media(max-width: 768px){
-  .hero-top, .hero-bottom {
+  .hero-content {
+    flex-direction: column;
     text-align: center;
   }
 }
@@ -112,18 +135,28 @@ h2 {
 </section>
 
 <section class="hero-bottom">
-  <p class="role">Data Scientist | Energy Analytics & Data Engineering</p>
-  <p>Charlotte, NC • 704-965-7144 • pyeliset@charlotte.edu</p>
+  <div class="hero-content">
 
-  <div class="social-buttons">
-    <a href="https://github.com/pavaniyelisetti" target="_blank">GitHub</a>
-    <a href="https://www.linkedin.com/in/pavani-yelisetti-363424257/" target="_blank">LinkedIn</a>
-  </div>
+    <div class="hero-left">
+      <p class="role">Data Scientist | Energy Analytics & Data Engineering</p>
+      <p>Charlotte, NC • 704-965-7144 • pyeliset@charlotte.edu</p>
 
-  <div class="resume-button">
-    <a href="https://docs.google.com/document/d/1mmJZWMNdli6FyeODuO3v84pSbRw2izpS/export?format=pdf" target="_blank">
-      Download Resume
-    </a>
+      <div class="social-buttons">
+        <a href="https://github.com/pavaniyelisetti" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/pavani-yelisetti-363424257/" target="_blank">LinkedIn</a>
+      </div>
+
+      <div class="resume-button">
+        <a href="https://docs.google.com/document/d/1mmJZWMNdli6FyeODuO3v84pSbRw2izpS/export?format=pdf" target="_blank">
+          Download Resume
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <img src="https://raw.githubusercontent.com/pavaniyelisetti/my_personal_portfolio/main/professional_pic_mirror.png" alt="Pavani Yelisetti">
+    </div>
+
   </div>
 </section>
 
@@ -136,7 +169,6 @@ Data Scientist with hands-on experience in large-scale data analysis, pipeline e
 
 <h2>TECHNICAL SKILLS</h2>
 <div class="card skills">
-
 <b>Languages & Visualization:</b><br>
 <span>Python</span><span>R</span><span>SAS</span><span>SQL</span><span>VBA</span>
 <span>Power BI</span><span>Tableau</span>
@@ -164,7 +196,6 @@ Data Scientist with hands-on experience in large-scale data analysis, pipeline e
 <span>Communication</span><span>Collaboration</span>
 <span>Analytical Thinking</span><span>Problem Solving</span>
 <span>Adaptability</span><span>Attention to Detail</span>
-
 </div>
 
 <h2>WORK EXPERIENCE</h2>
